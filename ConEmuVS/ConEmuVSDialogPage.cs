@@ -13,5 +13,10 @@ namespace ConEmuVS
         [DisplayName("ConEmu installation path")]
         [Description("")]
         public string ConEmuInstallPath { get; set; } = String.Empty;
+
+        [Category(CategoryTitle)]
+        [DisplayName("ConEmu command line interpreter")]
+        [Description("")]
+        public string ConEmuCommandLine { get; set; } = "cmd.exe";
     }
 }

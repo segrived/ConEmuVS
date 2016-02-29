@@ -20,7 +20,7 @@ namespace ConEmuVS
             if (String.IsNullOrEmpty(conEmuDirectory)) {
                 return;
             }
-            var x = Environment.CurrentDirectory;
+
             string conEmuExecutableName = Environment.Is64BitOperatingSystem ? "ConEmu64.exe" : "ConEmu.exe";
             string conEmuPath = Path.Combine(conEmuDirectory, conEmuExecutableName);
             if (! File.Exists(conEmuPath)) {
@@ -29,10 +29,14 @@ namespace ConEmuVS
 
             string conEmuConfig = Path.Combine(ConEmuVSPackage.ExtensionConfigPath, "config.xml");
 
+            string shell = ConEmuVSPackage.GeneralOptions.ConEmuCommandLine;
+            if (String.IsNullOrEmpty(shell)) {
+                shell = "cmd.exe"; //default value
+            }
+
             string sRunArgs =
                 @" -InsideWnd 0x" + this.ConEmuHost.Handle.ToString("X") +
-                @" -LoadCfgFile " + conEmuConfig + " -cmd {cmd}";
-
+                @" -LoadCfgFile " + conEmuConfig + " -cmd " + shell;
             try {
                 this._conEmuProcess = Process.Start(conEmuPath, sRunArgs);
             } catch (Win32Exception) {

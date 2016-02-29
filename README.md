@@ -1,4 +1,4 @@
-﻿# ConEmuVS: Integrates ConEnu into Visual Studio
+﻿# ConEmuVS: Integrates ConEmu into Visual Studio
 
 Just prototype, based on [ConEmu-inside](https://github.com/Maximus5/conemu-inside) example by [Maximus5](https://github.com/Maximus5)
 
