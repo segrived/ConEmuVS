@@ -43,7 +43,7 @@ namespace ConEmuVS
             }
 
             this._parser.Load(versionFileInfoPath);
-            string location = this._parser.Sections["ConEmu_Stable_2"].Keys["location_arc"].Value;
+            string location = this._parser.Sections["ConEmu_Devel_2"].Keys["location_arc"].Value;
             string address = location.Split(',').Last();
 
             if (String.IsNullOrEmpty(address) || ExtensionHelpers.IsValidUrl(address)) {

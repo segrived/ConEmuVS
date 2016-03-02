@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Runtime.InteropServices;
 using Microsoft.VisualStudio.Shell;
@@ -8,7 +7,7 @@ namespace ConEmuVS
 {
     [PackageRegistration(UseManagedResourcesOnly = true)]
     [InstalledProductRegistration("#110", "#112", "1.0", IconResourceID = 400)]
-    [Guid(ConEmuVSPackage.PackageGuidString)]
+    [Guid(PackageGuidString)]
     [ProvideMenuResource("Menus.ctmenu", 1)]
     [ProvideToolWindow(typeof(ConEmuToolWindow))]
     [ProvideOptionPage(typeof(ConEmuVsDialogPage), "ConEmuVS", "General", 0, 0, true)]

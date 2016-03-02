@@ -18,6 +18,7 @@ namespace ConEmuVS.Helpers
                 FileName = pathTo7Zip,
                 Arguments = $"x {archive} -y -o\"{outPath}\"",
                 CreateNoWindow = true,
+                UseShellExecute = false
             };
             Process.Start(proc);
         }

@@ -59,6 +59,7 @@
     </Compile>
     <Compile Include="ConEmuVSPackage.cs" />
     <Compile Include="ConEmuVsDialogPage.cs" />
+    <Compile Include="GuiMacro.cs" />
     <Compile Include="Helpers\ExtensionHelpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
